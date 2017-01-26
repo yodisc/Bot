@@ -33,6 +33,26 @@ public class spamkeys {
                 }
 
                 r.keyRelease(KeyEvent.VK_A);
+
+                r.keyPress(KeyEvent.VK_X);
+                try {
+                    Thread.sleep(30);
+                } catch (InterruptedException w) {
+                    w.printStackTrace();
+                }
+
+                r.keyRelease(KeyEvent.VK_Y);
+
+                r.keyPress(KeyEvent.VK_A);
+                try {
+                    Thread.sleep(30);
+                } catch (InterruptedException w) {
+                    w.printStackTrace();
+                }
+
+                r.keyRelease(KeyEvent.VK_Y);
+
+
             }
 
         } catch (AWTException e) {

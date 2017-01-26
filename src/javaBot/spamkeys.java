@@ -10,23 +10,33 @@ public class spamkeys {
 
     private static Robot r;
 
-    public static void spam(){
-
+    public static void spam() {
+        Robot r = null;
         try {
             r = new Robot();
+            for (int i = 0; i <= 500; i++) {
+
+                r.keyPress(KeyEvent.VK_D);
+                try {
+                    Thread.sleep(30);
+                } catch (InterruptedException w) {
+                    w.printStackTrace();
+                }
+
+                r.keyRelease(KeyEvent.VK_D);
+
+                r.keyPress(KeyEvent.VK_A);
+                try {
+                    Thread.sleep(30);
+                } catch (InterruptedException w) {
+                    w.printStackTrace();
+                }
+
+                r.keyRelease(KeyEvent.VK_A);
+            }
+
         } catch (AWTException e) {
             e.printStackTrace();
         }
-        int count = 0;
-        while (count <= 50){
-
-            r.keyPress(KeyEvent.VK_D);
-            r.keyRelease(KeyEvent.VK_D);
-            count++;
-
-        }
-
-
-
     }
 }
